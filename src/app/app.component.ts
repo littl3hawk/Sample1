@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 
 @Component({
    selector: 'main-app',
@@ -7,7 +7,7 @@ import {Component} from 'angular2/core';
 
 export class AppComponent{
     constructor() {}
-}
+
 
 /*import { Component, OnInit } from '@angular/core';
 
@@ -22,3 +22,7 @@ export class AppComponent *implements OnInit* {
 
     *ngOnInit() { }*
 }*/
+
+
+
+}
