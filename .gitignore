@@ -1,2 +1,6 @@
 node_modules/
+npm-debug.log
+src/**/*.js
+!src/systemjs.config.js
+*.js.map
 .DS_Store

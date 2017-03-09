@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "sample.css",
+	"sources": [
+		"sample.scss"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,IAAI,AAAC,CACH,MAAM,CAAE,IAAI,CACZ,gBAAgB,CAJT,GAAG,CAKX"
+}

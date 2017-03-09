@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "sample2.css",
+	"sources": [
+		"sample2.scss"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,IAAI,AAAC,CACH,MAAM,CAAE,IAAI,CACZ,gBAAgB,CAJT,IAAM,CAKd"
+}
