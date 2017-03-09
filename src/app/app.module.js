@@ -9,8 +9,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
+//import { RouterModule }       from '@angular/router';
 var app_component_1 = require("./app.component");
-//import { HeroFormComponent } from './hero-form.component';
+var feed_component_1 = require("./feed/feed.component");
+var fuel_component_1 = require("./fuel/fuel.component");
+var hero_component_1 = require("./hero/hero.component");
+var pdf_component_1 = require("./pdf/pdf.component");
+var hero_service_1 = require("./hero.service");
+var app_routing_module_1 = require("./app-routing.module");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,12 +26,17 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
-            forms_1.FormsModule
+            forms_1.FormsModule,
+            app_routing_module_1.AppRoutingModule
         ],
         declarations: [
-            app_component_1.AppComponent
-            //,HeroFormComponent
+            app_component_1.AppComponent,
+            feed_component_1.FeedComponent,
+            fuel_component_1.FuelComponent,
+            hero_component_1.HeroComponent,
+            pdf_component_1.PdfComponent
         ],
+        providers: [hero_service_1.HeroService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

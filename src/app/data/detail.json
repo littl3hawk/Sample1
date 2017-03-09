@@ -1,0 +1,313 @@
+{
+    "Error": false,
+    "Data": [
+        {
+            "PriceAverage": 118.5,
+            "PriceMax": 139.9,
+            "PriceMin": 109.3,
+            "PriceYesterday": 118.6,
+            "PriceThreshold": 116.9,
+            "PriceTerminal": 115.98,
+            "Trend": -1,
+            "Suggest": 3,
+            "LastUpdated": "09 Mar 2017 18:59:02"
+        }
+    ],
+    "Trend": [
+        {
+            "Date": "2017-01-09",
+            "Retail": 122.3,
+            "Wholesale": 121.6
+        },
+        {
+            "Date": "2017-01-10",
+            "Retail": 123,
+            "Wholesale": 121.6
+        },
+        {
+            "Date": "2017-01-11",
+            "Retail": 123.3,
+            "Wholesale": 122.17
+        },
+        {
+            "Date": "2017-01-12",
+            "Retail": 122.9,
+            "Wholesale": 121.84
+        },
+        {
+            "Date": "2017-01-13",
+            "Retail": 127.6,
+            "Wholesale": 121.84
+        },
+        {
+            "Date": "2017-01-14",
+            "Retail": 132.9,
+            "Wholesale": 121.14
+        },
+        {
+            "Date": "2017-01-15",
+            "Retail": 137.7,
+            "Wholesale": 120.42
+        },
+        {
+            "Date": "2017-01-16",
+            "Retail": 137.7,
+            "Wholesale": 120.42
+        },
+        {
+            "Date": "2017-01-17",
+            "Retail": 140.1,
+            "Wholesale": 119.94
+        },
+        {
+            "Date": "2017-01-18",
+            "Retail": 140.1,
+            "Wholesale": 119.71
+        },
+        {
+            "Date": "2017-01-19",
+            "Retail": 140.1,
+            "Wholesale": 119.55
+        },
+        {
+            "Date": "2017-01-20",
+            "Retail": 140.1,
+            "Wholesale": 119.55
+        },
+        {
+            "Date": "2017-01-21",
+            "Retail": 137.7,
+            "Wholesale": 119.92
+        },
+        {
+            "Date": "2017-01-22",
+            "Retail": 140.1,
+            "Wholesale": 119.92
+        },
+        {
+            "Date": "2017-01-23",
+            "Retail": 137.7,
+            "Wholesale": 119.92
+        },
+        {
+            "Date": "2017-01-24",
+            "Retail": 140.1,
+            "Wholesale": 119.77
+        },
+        {
+            "Date": "2017-01-25",
+            "Retail": 140.1,
+            "Wholesale": 119.77
+        },
+        {
+            "Date": "2017-01-26",
+            "Retail": 137.7,
+            "Wholesale": 119.44
+        },
+        {
+            "Date": "2017-01-27",
+            "Retail": 137.7,
+            "Wholesale": 119.2
+        },
+        {
+            "Date": "2017-01-28",
+            "Retail": 137.7,
+            "Wholesale": 119.2
+        },
+        {
+            "Date": "2017-01-29",
+            "Retail": 137.7,
+            "Wholesale": 118.81
+        },
+        {
+            "Date": "2017-01-30",
+            "Retail": 134.3,
+            "Wholesale": 118.81
+        },
+        {
+            "Date": "2017-01-31",
+            "Retail": 134.3,
+            "Wholesale": 118.81
+        },
+        {
+            "Date": "2017-02-01",
+            "Retail": 133.6,
+            "Wholesale": 118.78
+        },
+        {
+            "Date": "2017-02-02",
+            "Retail": 132.7,
+            "Wholesale": 119.24
+        },
+        {
+            "Date": "2017-02-03",
+            "Retail": 133.1,
+            "Wholesale": 119.31
+        },
+        {
+            "Date": "2017-02-04",
+            "Retail": 132.7,
+            "Wholesale": 119.31
+        },
+        {
+            "Date": "2017-02-05",
+            "Retail": 133.1,
+            "Wholesale": 119.31
+        },
+        {
+            "Date": "2017-02-06",
+            "Retail": 133.1,
+            "Wholesale": 119.79
+        },
+        {
+            "Date": "2017-02-07",
+            "Retail": 130.3,
+            "Wholesale": 0
+        },
+        {
+            "Date": "2017-02-08",
+            "Retail": 129.6,
+            "Wholesale": 0
+        },
+        {
+            "Date": "2017-02-09",
+            "Retail": 129.1,
+            "Wholesale": 0
+        },
+        {
+            "Date": "2017-02-10",
+            "Retail": 129.1,
+            "Wholesale": 0
+        },
+        {
+            "Date": "2017-02-11",
+            "Retail": 128.7,
+            "Wholesale": 119.59
+        },
+        {
+            "Date": "2017-02-12",
+            "Retail": 128.7,
+            "Wholesale": 119.59
+        },
+        {
+            "Date": "2017-02-13",
+            "Retail": 127.8,
+            "Wholesale": 119.59
+        },
+        {
+            "Date": "2017-02-14",
+            "Retail": 127.8,
+            "Wholesale": 119.52
+        },
+        {
+            "Date": "2017-02-15",
+            "Retail": 127.8,
+            "Wholesale": 119.65
+        },
+        {
+            "Date": "2017-02-16",
+            "Retail": 127.8,
+            "Wholesale": 119.81
+        },
+        {
+            "Date": "2017-02-17",
+            "Retail": 127.8,
+            "Wholesale": 120.03
+        },
+        {
+            "Date": "2017-02-18",
+            "Retail": 127.8,
+            "Wholesale": 120.18
+        },
+        {
+            "Date": "2017-02-19",
+            "Retail": 127.8,
+            "Wholesale": 0
+        },
+        {
+            "Date": "2017-02-20",
+            "Retail": 127.8,
+            "Wholesale": 120.18
+        },
+        {
+            "Date": "2017-02-21",
+            "Retail": 127.8,
+            "Wholesale": 120.1
+        },
+        {
+            "Date": "2017-02-22",
+            "Retail": 127.8,
+            "Wholesale": 119.64
+        },
+        {
+            "Date": "2017-02-23",
+            "Retail": 127.8,
+            "Wholesale": 119.64
+        },
+        {
+            "Date": "2017-02-24",
+            "Retail": 127.8,
+            "Wholesale": 118.89
+        },
+        {
+            "Date": "2017-02-25",
+            "Retail": 127.8,
+            "Wholesale": 117.88
+        },
+        {
+            "Date": "2017-02-26",
+            "Retail": 127.8,
+            "Wholesale": 117.88
+        },
+        {
+            "Date": "2017-02-27",
+            "Retail": 127.8,
+            "Wholesale": 117.88
+        },
+        {
+            "Date": "2017-02-28",
+            "Retail": 127.8,
+            "Wholesale": 117.55
+        },
+        {
+            "Date": "2017-03-01",
+            "Retail": 127.8,
+            "Wholesale": 117.5
+        },
+        {
+            "Date": "2017-03-02",
+            "Retail": 127.8,
+            "Wholesale": 117.42
+        },
+        {
+            "Date": "2017-03-03",
+            "Retail": 127.8,
+            "Wholesale": 117.25
+        },
+        {
+            "Date": "2017-03-04",
+            "Retail": 127.8,
+            "Wholesale": 117.11
+        },
+        {
+            "Date": "2017-03-05",
+            "Retail": 127.8,
+            "Wholesale": 117.11
+        },
+        {
+            "Date": "2017-03-06",
+            "Retail": 127.8,
+            "Wholesale": 117.11
+        },
+        {
+            "Date": "2017-03-07",
+            "Retail": 127.8,
+            "Wholesale": 116.77
+        },
+        {
+            "Date": "2017-03-08",
+            "Retail": 127.8,
+            "Wholesale": 116.77
+        }
+    ]
+}

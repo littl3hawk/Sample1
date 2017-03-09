@@ -13,13 +13,14 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.name = 'Angular';
+        this.title = 'Sample 1';
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'main-app',
-        template: '<h1>Hiya! First Component</h1>'
+        template: "\n        <h1>Hiya! First Component</h1>\n        <h1>{{title}}</h1>\n\n        <nav>\n            <a routerLink=\"/fuel\">Fuel</a> || \n            <a routerLink=\"/feed\">Feed</a> || \n            <a routerLink=\"/pdf\">Pdf</a> || \n            <a routerLink=\"/hero\">Hero</a>\n        </nav>\n\n        <hr/>\n        <router-outlet></router-outlet>\n        <hr/>\n"
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);
