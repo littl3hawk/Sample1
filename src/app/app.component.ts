@@ -2,15 +2,22 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'main-app',
+    styles: [`
+        nav a.active {
+            font-style: italic;
+        }
+    `],
     template: `
         <h1>Hiya! First Component</h1>
         <h1>{{title}}</h1>
 
         <nav>
-            <a routerLink="/fuel">Fuel</a> || 
-            <a routerLink="/feed">Feed</a> || 
-            <a routerLink="/pdf">Pdf</a> || 
-            <a routerLink="/hero">Hero</a>
+            <a routerLink="/fuel" routerLinkActive="active">Fuel</a> || 
+            <a routerLink="/feed" routerLinkActive="active">Feed</a> || 
+            <a routerLink="/pdf" routerLinkActive="active">Pdf</a> || 
+            <a routerLink="/hero" routerLinkActive="active">Hero</a>
+
+            [<a [routerLink]="['/hero-detail', 15]" routerLinkActive="active">Detail H15</a>]
         </nav>
 
         <hr/>

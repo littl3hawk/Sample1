@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FeedComponent } from './feed/feed.component';
 import { FuelComponent } from './fuel/fuel.component';
 import { HeroComponent } from './hero/hero.component';
+import { HeroDetailComponent } from './hero/hero-detail.component';
 import { PdfComponent } from './pdf/pdf.component';
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
     { path: 'feed', component: FeedComponent },
     { path: 'fuel', component: FuelComponent },
     { path: 'hero', component: HeroComponent },
+    { path: 'hero-detail/:id', component: HeroDetailComponent },
     { path: 'pdf', component: PdfComponent }
 ];
 

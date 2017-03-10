@@ -20,7 +20,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'main-app',
-        template: "\n        <h1>Hiya! First Component</h1>\n        <h1>{{title}}</h1>\n\n        <nav>\n            <a routerLink=\"/fuel\">Fuel</a> || \n            <a routerLink=\"/feed\">Feed</a> || \n            <a routerLink=\"/pdf\">Pdf</a> || \n            <a routerLink=\"/hero\">Hero</a>\n        </nav>\n\n        <hr/>\n        <router-outlet></router-outlet>\n        <hr/>\n"
+        styles: ["\n        nav a.active {\n            font-style: italic;\n        }\n    "],
+        template: "\n        <h1>Hiya! First Component</h1>\n        <h1>{{title}}</h1>\n\n        <nav>\n            <a routerLink=\"/fuel\" routerLinkActive=\"active\">Fuel</a> || \n            <a routerLink=\"/feed\" routerLinkActive=\"active\">Feed</a> || \n            <a routerLink=\"/pdf\" routerLinkActive=\"active\">Pdf</a> || \n            <a routerLink=\"/hero\" routerLinkActive=\"active\">Hero</a>\n\n            [<a [routerLink]=\"['/hero-detail', 15]\" routerLinkActive=\"active\">Detail H15</a>]\n        </nav>\n\n        <hr/>\n        <router-outlet></router-outlet>\n        <hr/>\n"
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);
