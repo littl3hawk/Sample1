@@ -1,5 +1,51 @@
 FUEL DETAIL
 
-  <hr/>
+<hr/>
+<div *ngIf="fuelDetail">
+  <div class="sectionSummary">
+    <div class="summary">
+      <table>
+        <tbody>
+          <tr>
+            <td>Average Price</td>
+            <td>{{fuelDetail.priceAverage}} c</td>
+          </tr>
+          <tr>
+            <td>Lowest Price</td>
+            <td>{{fuelDetail.priceMin}} c</td>
+          </tr>
+          <tr>
+            <td>Highest Price</td>
+            <td>{{fuelDetail.priceMax}} c</td>
+          </tr>
+          <tr>
+            <td>Yesterday's Price</td>
+            <td>{{fuelDetail.priceYesterday}} c</td>
+          </tr>
+          <tr>
+            <td>Don't Pay More Than</td>
+            <td>{{fuelDetail.priceThreshold}} c</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-  {{fuelDetail.priceAverage}} :: {{fuelDetail.lastUpdated}}
+    <!--<div class="trendIcon">
+      <div class="trendIconContainer">
+        <i class="iconTrend material-icons md-48 md-light">vertical_align_top</i>
+      </div>
+    </div>-->
+
+    <div class="trendSummary">
+      <div class="trendSummaryContainer">
+        <div><span>Trend: {{fuelDetail.trend}}</span></div>
+        <div><span>Suggest: {{fuelDetail.suggest}}</span></div>
+        <div><span>Last Updated:{{fuelDetail.lastUpdated}}</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<my-fuel-trend></my-fuel-trend>

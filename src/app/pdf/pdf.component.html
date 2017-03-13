@@ -1,1 +1,42 @@
-PDF LISTING
+PDF LISTING {{contentFolder}}
+<div class="pdfContainer">
+    <div class="wrap">
+        <ul class="folders">
+            <li *ngFor="let folder of folders" [class.selected]="folder === selectedFolder" (click)="onSelectFolder(folder)">
+                <span>
+				    <i class="material-icons md-48 md-light">folder</i>
+                </span>
+                <span class="title">{{folder.name}}</span>
+
+                <div *ngIf="selectedFolder === folder && selectedFiles">
+                    <ul class="files">
+                        <li *ngFor="let file of selectedFiles" (click)="$event.stopPropagation()">
+                            <div class="imgCover" (click)="onSelectFile(file); $event.stopPropagation()">
+                                <img *ngIf="file.hasCover" src="{{contentFolder}}/{{folder.name}}/{{file.name}}.png">
+                                <div *ngIf="!file.hasCover" class="template"></div>
+                            </div>
+                            <div>
+                                <div class="title" (click)="onSelectFile(file); $event.stopPropagation()">{{file.displayName}}</div>
+                                <div class="info">
+                                    <div>{{getCategoryName(file.categoryId)}}</div>
+                                    <div>{{file.pageCount}} pages</div>
+                                    <div>{{file.viewed}} views</div>
+
+                                    <span class="std favourite" title="Favourite" (click)="onSelectFavourite(file); $event.stopPropagation()">
+                                        <i class="material-icons md-light">{{file.isFavourite ? 'star' : '&#xE83A;'}}</i>
+                                    </span>
+                                    <span class="std category" title="Category" (click)="onSelectCategory(file); $event.stopPropagation()">
+                                        <i class="material-icons md-light">bubble_chart</i>
+                                    </span>
+                                    <span class="std remove" title="Remove" (click)="onSelectRemove(file); $event.stopPropagation()">
+                                        <i class="material-icons md-light">remove_circle_outline</i>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
