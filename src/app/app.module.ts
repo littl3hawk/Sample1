@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -10,6 +11,8 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
+import { DialogComponent } from './component/dialog.component';
+
 import { FeedComponent } from './feed/feed.component';
 import { FuelComponent } from './fuel/fuel.component';
 import { FuelTrendComponent } from './fuel/fuel-trend.component';
@@ -27,11 +30,13 @@ import { PdfService } from './service/pdf.service';
     BrowserModule,
     FormsModule,
     HttpModule,
+    MaterialModule,
     //InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule
   ],
   declarations: [
     AppComponent,
+    DialogComponent,
     FeedComponent,
     FuelComponent,
     FuelTrendComponent,
@@ -45,6 +50,7 @@ import { PdfService } from './service/pdf.service';
     FuelTrendService,
     PdfService
   ],
+  entryComponents: [ DialogComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

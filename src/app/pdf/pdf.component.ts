@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
+import { DialogComponent } from '../component/dialog.component';
 import { PdfCategory } from '../type/pdf-category';
 import { PdfFile } from '../type/pdf-file';
 import { PdfFolder } from '../type/pdf-folder';
@@ -23,7 +25,7 @@ export class PdfComponent implements OnInit {
     selectedFolder: PdfFolder;
     selectedFiles: PdfFile[];
 
-    constructor(private pdfService: PdfService) { }
+    constructor(private pdfService: PdfService, public dialog: MdDialog) { }
 
     getPdf(): void {
         // Sync
@@ -56,15 +58,12 @@ export class PdfComponent implements OnInit {
     }
 
     onSelectFolder(folder: PdfFolder): void {
-        console.info('select folder: ' + folder.name);
-        if (this.selectedFolder && this.selectedFolder.id == folder.id) {
-            this.selectedFolder = null;
-            this.selectedFiles = null;
-        }
-        else {
-            this.selectedFolder = folder;
-            this.selectedFiles = this.files.filter(x => x.folderId == this.selectedFolder.id);
-        }
+        this.selectedFolder = this.selectedFolder && this.selectedFolder.id == folder.id ? null : folder;
+        this.updateSelectedFiles();
+    }
+
+    updateSelectedFiles(): void {
+        this.selectedFiles = this.selectedFolder ? this.files.filter(x => x.folderId == this.selectedFolder.id) : null;
     }
 
     onSelectFile(file: PdfFile): void {
@@ -104,22 +103,25 @@ export class PdfComponent implements OnInit {
     }
 
     onSelectRemove(file: PdfFile): void {
+        let selectedOption: string;
+
+        let dialogRef = this.dialog.open(DialogComponent);
+        dialogRef.componentInstance.title = 'Remove';
+        dialogRef.componentInstance.message = `Are you sure you want to remove ${file.displayName}?`;
+
+        dialogRef.afterClosed().subscribe(result => {
+            selectedOption = result;
+            console.info(selectedOption);
+        });
+
         console.info('select remove: ' + file.displayName);
 
         this.pdfService
             .delete(file)
             .then(() => {
-                console.info(this.files.length);
                 this.files = this.files.filter(x => x.id !== file.id);
-                console.info(this.files.length);
+                this.updateSelectedFiles();
             });
-
-        /*var index = this.files.indexOf(file);
-        if (index >= 0) {
-            this.files.splice(index, 1);
-        }*/
-
-        //ChangeDetectorRef.detectChanges()
     }
 
     getCategoryName(categoryId: number): string {

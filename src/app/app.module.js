@@ -10,8 +10,10 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
+var material_1 = require("@angular/material");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
+var dialog_component_1 = require("./component/dialog.component");
 var feed_component_1 = require("./feed/feed.component");
 var fuel_component_1 = require("./fuel/fuel.component");
 var fuel_trend_component_1 = require("./fuel/fuel-trend.component");
@@ -33,11 +35,13 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
             http_1.HttpModule,
+            material_1.MaterialModule,
             //InMemoryWebApiModule.forRoot(InMemoryDataService),
             app_routing_module_1.AppRoutingModule
         ],
         declarations: [
             app_component_1.AppComponent,
+            dialog_component_1.DialogComponent,
             feed_component_1.FeedComponent,
             fuel_component_1.FuelComponent,
             fuel_trend_component_1.FuelTrendComponent,
@@ -51,6 +55,7 @@ AppModule = __decorate([
             fuel_trend_service_1.FuelTrendService,
             pdf_service_1.PdfService
         ],
+        entryComponents: [dialog_component_1.DialogComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
