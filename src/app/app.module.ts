@@ -12,6 +12,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { DialogComponent } from './component/dialog.component';
+import { ConfirmDialog } from './component/confirm-dialog.component';
 
 import { FeedComponent } from './feed/feed.component';
 import { FuelComponent } from './fuel/fuel.component';
@@ -24,6 +25,7 @@ import { HeroService } from './service/hero.service';
 import { FuelDetailService } from './service/fuel-detail.service';
 import { FuelTrendService } from './service/fuel-trend.service';
 import { PdfService } from './service/pdf.service';
+import { DialogsService } from './service/dialogs.service';
 
 @NgModule({
   imports: [
@@ -34,8 +36,12 @@ import { PdfService } from './service/pdf.service';
     //InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule
   ],
+  exports: [
+    ConfirmDialog
+  ],
   declarations: [
     AppComponent,
+    ConfirmDialog,
     DialogComponent,
     FeedComponent,
     FuelComponent,
@@ -48,9 +54,13 @@ import { PdfService } from './service/pdf.service';
     HeroService,
     FuelDetailService,
     FuelTrendService,
-    PdfService
+    PdfService,
+    DialogsService
   ],
-  entryComponents: [ DialogComponent ],
+  entryComponents: [
+    ConfirmDialog,
+    DialogComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

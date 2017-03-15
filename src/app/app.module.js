@@ -14,6 +14,7 @@ var material_1 = require("@angular/material");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var dialog_component_1 = require("./component/dialog.component");
+var confirm_dialog_component_1 = require("./component/confirm-dialog.component");
 var feed_component_1 = require("./feed/feed.component");
 var fuel_component_1 = require("./fuel/fuel.component");
 var fuel_trend_component_1 = require("./fuel/fuel-trend.component");
@@ -24,6 +25,7 @@ var hero_service_1 = require("./service/hero.service");
 var fuel_detail_service_1 = require("./service/fuel-detail.service");
 var fuel_trend_service_1 = require("./service/fuel-trend.service");
 var pdf_service_1 = require("./service/pdf.service");
+var dialogs_service_1 = require("./service/dialogs.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -39,8 +41,12 @@ AppModule = __decorate([
             //InMemoryWebApiModule.forRoot(InMemoryDataService),
             app_routing_module_1.AppRoutingModule
         ],
+        exports: [
+            confirm_dialog_component_1.ConfirmDialog
+        ],
         declarations: [
             app_component_1.AppComponent,
+            confirm_dialog_component_1.ConfirmDialog,
             dialog_component_1.DialogComponent,
             feed_component_1.FeedComponent,
             fuel_component_1.FuelComponent,
@@ -53,9 +59,13 @@ AppModule = __decorate([
             hero_service_1.HeroService,
             fuel_detail_service_1.FuelDetailService,
             fuel_trend_service_1.FuelTrendService,
-            pdf_service_1.PdfService
+            pdf_service_1.PdfService,
+            dialogs_service_1.DialogsService
         ],
-        entryComponents: [dialog_component_1.DialogComponent],
+        entryComponents: [
+            confirm_dialog_component_1.ConfirmDialog,
+            dialog_component_1.DialogComponent
+        ],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

@@ -7,6 +7,8 @@ import { PdfFile } from '../type/pdf-file';
 import { PdfFolder } from '../type/pdf-folder';
 import { PdfWrapper } from '../type/pdf-wrapper';
 import { PdfService } from '../service/pdf.service';
+import { DialogsService } from '../service/dialogs.service';
+
 
 @Component({
     moduleId: module.id,
@@ -25,7 +27,7 @@ export class PdfComponent implements OnInit {
     selectedFolder: PdfFolder;
     selectedFiles: PdfFile[];
 
-    constructor(private pdfService: PdfService, public dialog: MdDialog) { }
+    constructor(private pdfService: PdfService, private dialogsService: DialogsService /*, public dialog: MdDialog*/) { }
 
     getPdf(): void {
         // Sync
@@ -103,16 +105,27 @@ export class PdfComponent implements OnInit {
     }
 
     onSelectRemove(file: PdfFile): void {
-        let selectedOption: string;
+        /*let selectedOption: string;
 
         let dialogRef = this.dialog.open(DialogComponent);
+        dialogRef.config.disableClose = false;
         dialogRef.componentInstance.title = 'Remove';
         dialogRef.componentInstance.message = `Are you sure you want to remove ${file.displayName}?`;
 
         dialogRef.afterClosed().subscribe(result => {
             selectedOption = result;
             console.info(selectedOption);
-        });
+        });*/
+
+        let result: any;
+
+        this.dialogsService
+            .confirm('Remove', `Are you sure you want to remove ${file.displayName}?`)
+            .subscribe(res => {
+                result = res;
+
+                console.info(result);
+            });
 
         console.info('select remove: ' + file.displayName);
 
