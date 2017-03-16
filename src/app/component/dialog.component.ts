@@ -1,22 +1,22 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { MdDialog, MdDialogRef } from '@angular/material';
+import { MdDialogRef } from '@angular/material';
+import { Component } from '@angular/core';
 
 @Component({
     moduleId: module.id,
-    selector: 'dialog-result-example-dialog',
-    templateUrl: './dialog.component.html',
-    /*template: `<h1 md-dialog-title>Dialog</h1>
-<div md-dialog-content>What would you like to do?</div>
-<div md-dialog-actions>
-  <button md-button (click)="dialogRef.close('Option 1')">Option 1?</button>
-  <button md-button (click)="dialogRef.close('Option 2')">Option 2?</button>
-</div>`*/
+    selector: 'confirm-dialog',
+    templateUrl: './confirm-dialog.component.html'
 })
 
-export class DialogComponent {
-    constructor(public dialogRef: MdDialogRef<DialogComponent>) { }
-
+export class ConfirmDialog {
     public title: string;
 
     public message: string;
+
+    public buttons: ConfirmDialogButton[];
+
+    constructor(public dialogRef: MdDialogRef<ConfirmDialog>) { }
+}
+
+export class ConfirmDialogButton {
+    constructor(public text: string, public value: any) { }
 }

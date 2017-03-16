@@ -42,3 +42,12 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 110%;
 }
+
+
+md-dialog-container {
+  height:auto !important;
+}
+
+.mat-button, .mat-icon-button, .mat-raised-button {
+  margin-right: 1px !important;
+}

@@ -11,7 +11,6 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
-import { DialogComponent } from './component/dialog.component';
 import { ConfirmDialog } from './component/confirm-dialog.component';
 
 import { FeedComponent } from './feed/feed.component';
@@ -42,7 +41,6 @@ import { DialogsService } from './service/dialogs.service';
   declarations: [
     AppComponent,
     ConfirmDialog,
-    DialogComponent,
     FeedComponent,
     FuelComponent,
     FuelTrendComponent,
@@ -58,8 +56,7 @@ import { DialogsService } from './service/dialogs.service';
     DialogsService
   ],
   entryComponents: [
-    ConfirmDialog,
-    DialogComponent
+    ConfirmDialog
   ],
   bootstrap: [AppComponent]
 })

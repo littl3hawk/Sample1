@@ -13,7 +13,6 @@ var http_1 = require("@angular/http");
 var material_1 = require("@angular/material");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
-var dialog_component_1 = require("./component/dialog.component");
 var confirm_dialog_component_1 = require("./component/confirm-dialog.component");
 var feed_component_1 = require("./feed/feed.component");
 var fuel_component_1 = require("./fuel/fuel.component");
@@ -47,7 +46,6 @@ AppModule = __decorate([
         declarations: [
             app_component_1.AppComponent,
             confirm_dialog_component_1.ConfirmDialog,
-            dialog_component_1.DialogComponent,
             feed_component_1.FeedComponent,
             fuel_component_1.FuelComponent,
             fuel_trend_component_1.FuelTrendComponent,
@@ -63,8 +61,7 @@ AppModule = __decorate([
             dialogs_service_1.DialogsService
         ],
         entryComponents: [
-            confirm_dialog_component_1.ConfirmDialog,
-            dialog_component_1.DialogComponent
+            confirm_dialog_component_1.ConfirmDialog
         ],
         bootstrap: [app_component_1.AppComponent]
     })

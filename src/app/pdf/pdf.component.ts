@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { MdDialog, MdDialogRef } from '@angular/material';
 
-import { DialogComponent } from '../component/dialog.component';
 import { PdfCategory } from '../type/pdf-category';
 import { PdfFile } from '../type/pdf-file';
 import { PdfFolder } from '../type/pdf-folder';
 import { PdfWrapper } from '../type/pdf-wrapper';
 import { PdfService } from '../service/pdf.service';
 import { DialogsService } from '../service/dialogs.service';
-
 
 @Component({
     moduleId: module.id,
@@ -27,7 +24,7 @@ export class PdfComponent implements OnInit {
     selectedFolder: PdfFolder;
     selectedFiles: PdfFile[];
 
-    constructor(private pdfService: PdfService, private dialogsService: DialogsService /*, public dialog: MdDialog*/) { }
+    constructor(private pdfService: PdfService, private dialogsService: DialogsService) { }
 
     getPdf(): void {
         // Sync
@@ -105,35 +102,19 @@ export class PdfComponent implements OnInit {
     }
 
     onSelectRemove(file: PdfFile): void {
-        /*let selectedOption: string;
-
-        let dialogRef = this.dialog.open(DialogComponent);
-        dialogRef.config.disableClose = false;
-        dialogRef.componentInstance.title = 'Remove';
-        dialogRef.componentInstance.message = `Are you sure you want to remove ${file.displayName}?`;
-
-        dialogRef.afterClosed().subscribe(result => {
-            selectedOption = result;
-            console.info(selectedOption);
-        });*/
-
-        let result: any;
-
         this.dialogsService
-            .confirm('Remove', `Are you sure you want to remove ${file.displayName}?`)
-            .subscribe(res => {
-                result = res;
+            .confirmYesNo('Remove', `Are you sure you want to remove ${file.displayName}?`, true)
+            .subscribe(result => {
+                if (result === true) {
+                    console.info('Result is true - delete the file');
 
-                console.info(result);
-            });
-
-        console.info('select remove: ' + file.displayName);
-
-        this.pdfService
-            .delete(file)
-            .then(() => {
-                this.files = this.files.filter(x => x.id !== file.id);
-                this.updateSelectedFiles();
+                    this.pdfService
+                        .delete(file)
+                        .then(() => {
+                            this.files = this.files.filter(x => x.id !== file.id);
+                            this.updateSelectedFiles();
+                        });
+                }
             });
     }
 
