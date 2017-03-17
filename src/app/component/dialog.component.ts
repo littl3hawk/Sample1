@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 
 @Component({
     moduleId: module.id,
-    selector: 'confirm-dialog',
-    templateUrl: './confirm-dialog.component.html'
+    selector: 'dialog',
+    templateUrl: './dialog.component.html'
 })
 
 export class ConfirmDialog {

@@ -11,7 +11,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
-import { ConfirmDialog } from './component/confirm-dialog.component';
+import { ConfirmDialog } from './component/dialog.component';
 
 import { FeedComponent } from './feed/feed.component';
 import { FuelComponent } from './fuel/fuel.component';

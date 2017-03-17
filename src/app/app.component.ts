@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import './style/styles.css';
+
 @Component({
     selector: 'main-app',
     styles: [`
@@ -7,9 +9,13 @@ import { Component } from '@angular/core';
             font-style: italic;
         }
     `],
+    ////styleUrls: ['./app.component.css'],
+    ////templateUrl: './app.component.html',
     template: `
         <h1>Hiya! First Component</h1>
         <h1>{{title}}</h1>
+
+        <img src="app/image/angular.png">
 
         <nav>
             <a routerLink="/fuel" routerLinkActive="active">Fuel</a> || 
