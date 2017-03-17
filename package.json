@@ -5,11 +5,88 @@
   "main": "index.js",
   "author": "",
   "license": "ISC",
+  "private": true,
   "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "dependencies": {
+    "@angular/common": "^2.4.0",
+    "@angular/compiler": "^2.4.0",
+    "@angular/core": "^2.4.0",
+    "@angular/forms": "^2.4.0",
+    "@angular/http": "^2.4.0",
+    "@angular/material": "^2.0.0-beta.2",
+    "@angular/platform-browser": "^2.4.0",
+    "@angular/platform-browser-dynamic": "^2.4.0",
+    "@angular/router": "^3.4.0",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.7.6",
+    "@types/node": "^7.0.7",
+    "angular-in-memory-web-api": "~0.2.4"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.0.0-rc.2",
+    "@angular/compiler-cli": "^2.4.0",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "~6.0.60",
+    "codelyzer": "~2.0.0",
+    "jasmine-core": "~2.5.2",
+    "jasmine-spec-reporter": "~3.2.0",
+    "karma": "~1.4.1",
+    "karma-chrome-launcher": "~2.0.0",
+    "karma-cli": "~1.0.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
+    "protractor": "~5.1.0",
+    "ts-node": "~2.0.0",
+    "tslint": "~4.5.0",
+    "typescript": "~2.0.0"
+  },
+  "other": {
+    "es6-shim": "^0.35.3",
+    "reflect-metadata": "0.1.2"
+  },
+  "otherDev": {
+    "concurrently": "^3.4.0",
+    "lite-server": "^2.2.2",
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0",
+    "tslint": "^3.15.1",
+    "typescript": "^2.2.1",
+    "typings": "^2.1.0",
+    "canonical-path": "0.0.2",
+    "lodash": "^4.16.4",
+    "jasmine-core": "~2.4.1",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "~4.0.14",
+    "rimraf": "^2.5.4",
+    "@types/node": "^6.0.46",
+    "@types/jasmine": "2.5.36"
+  },
+  "otherScripts": {
+    "postinstall": "npm run typings install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "app": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
+    "typings": "typings"
+  },
+  "scriptsPreCli": {
     "wp_start": "webpack-dev-server --inline --progress --port 8787",
     "wp_test": "karma start",
     "wp_build": "rimraf dist && webpack --config src/config/webpack.prod.js --progress --profile --bail",
-
     "build": "tsc -p src/",
     "build:watch": "tsc -p src/ -w",
     "build:e2e": "tsc -p e2e/",
@@ -32,26 +109,10 @@
     "lint": "tslint ./src/**/*.ts -t verbose",
     "lint2": "tslint --init"
   },
-  "dependencies": {
-    "@angular/common": "~2.4.0",
-    "@angular/compiler": "~2.4.0",
-    "@angular/core": "~2.4.0",
-    "@angular/forms": "~2.4.0",
-    "@angular/http": "~2.4.0",
-    "@angular/material": "^2.0.0-beta.2",
-    "@angular/platform-browser": "~2.4.0",
-    "@angular/platform-browser-dynamic": "~2.4.0",
-    "@angular/router": "~3.4.0",
-    "@types/node": "^7.0.7",
-    "angular-in-memory-web-api": "~0.2.4",
-    "core-js": "^2.4.1",
-    "rxjs": "5.0.1",
-    "systemjs": "0.19.40",
-    "zone.js": "^0.7.4"
+  "dependenciesPreCli": {
+    "systemjs": "0.19.40"
   },
-  "devDependencies": {
-    "@types/node": "^6.0.45",
-    "@types/jasmine": "^2.5.35",
+  "devDependenciesPreCli": {
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "3.1.2",
     "css-loader": "^0.26.1",
@@ -59,8 +120,6 @@
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.16.1",
-    "jasmine-core": "^2.4.1",
-    "karma": "^1.2.0",
     "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-sourcemap-loader": "^0.3.7",
@@ -70,45 +129,8 @@
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.2",
     "style-loader": "^0.13.1",
-    "typescript": "^2.2.1",
     "webpack": "2.2.0",
     "webpack-dev-server": "2.2.0-rc.0",
-    "webpack-merge": "^2.4.0"    
-  },
-  "other": {
-    "es6-shim": "^0.35.3",
-    "reflect-metadata": "0.1.2"
-  },
-  "otherDev": {
-    "concurrently": "^3.4.0",
-    "lite-server": "^2.2.2",
-    "node-sass": "^4.5.0",
-    "nodemon": "^1.11.0",
-    "tslint": "^3.15.1",
-    "typescript": "^2.2.1",
-    "typings": "^2.1.0",
-
-
-    "canonical-path": "0.0.2",
-    "lodash": "^4.16.4",
-    "jasmine-core": "~2.4.1",
-    "karma": "^1.3.0",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-cli": "^1.0.1",
-    "karma-jasmine": "^1.0.2",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "~4.0.14",
-    "rimraf": "^2.5.4",
-    "@types/node": "^6.0.46",
-    "@types/jasmine": "2.5.36"
-  },
-  "otherScripts": {
-    "postinstall": "npm run typings install",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "lite": "lite-server",
-    "app": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
-    "typings": "typings"
+    "webpack-merge": "^2.4.0"
   }
 }

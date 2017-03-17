@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DialogsService } from '../service/dialogs.service';
-import { ConfirmDialogButton } from '../component/confirm-dialog.component';
+import { ConfirmDialogButton } from '../component/dialog.component';
 
 @Component({
     moduleId: module.id,
